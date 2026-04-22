@@ -1,0 +1,43 @@
+excora/
+│
+├── backend/
+│   ├── app.py
+│   ├── config.py
+│   │
+│   ├── routes/
+│   │   ├── market.py
+│   │   ├── user.py
+│   │   └── alerts.py
+│   │
+│   ├── services/
+│   │   ├── binance_service.py
+│   │   ├── websocket_service.py
+│   │   └── indicator_service.py
+│   │
+│   ├── models/
+│   │   ├── user.py
+│   │   ├── watchlist.py
+│   │   └── alerts.py
+│   │
+│   └── database/
+│       └── db.py
+│
+├── frontend/
+│   ├── src/
+│   │   ├── pages/
+│   │   │   ├── Trade.tsx
+│   │   │   ├── Dashboard.tsx
+│   │   │   └── Login.tsx
+│   │   │
+│   │   ├── components/
+│   │   │   ├── Chart.tsx
+│   │   │   ├── Watchlist.tsx
+│   │   │   ├── Navbar.tsx
+│   │   │   └── Indicators.tsx
+│   │   │
+│   │   ├── services/
+│   │   │   └── api.ts
+│   │   │
+│   │   └── App.tsx
+│
+└── docker-compose.yml
