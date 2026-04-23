@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXCORA PRO | Professional Terminal</title>
+    <style>
+        /* المتغيرات الأساسية والهوية البصرية */
+        :root { 
+            --main-blue: #0263FF; 
+            --bg: #0b0e11; 
+            --card: #181a20; 
+            --up-green: #00ff88;
+            --down-red: #ff3b3b;
+        }
+
+        body, html { 
+            margin: 0; padding: 0; height: 100%; width: 100%; 
+            background: var(--bg); color: white; overflow: hidden; 
+            font-family: 'Segoe UI', Tahoma, sans-serif; 
+        }
+
+        .app-shell { display: flex; flex-direction: column; height: 100vh; }
+
+        /* الهيدر: تم رفع الـ z-index لضمان عدم الجمود */
+        .header { 
+            height: 55px; background: var(--card); border-bottom: 1px solid #2b3139; 
+            display: flex; align-items: center; padding: 0 20px; 
+            justify-content: space-between; z-index: 1000; position: relative;
+        }
+
+        .main-workspace { display: flex; flex: 1; overflow: hidden; position: relative; }
+
+        /* الشارت: يملأ المساحة المتبقية */
+        #tv_chart_container { flex: 1; height: 100%; z-index: 1; }
+
+        /* القائمة الجانبية: تصميم كروت تفاعلي مع "جمالية التحول" */
+        .sidebar { 
+            width: 280px; background: var(--card); border-left: 1px solid #2b3139; 
+            display: flex; flex-direction: column; padding: 15px; z-index: 100;
+        }
+
+        .price-card { 
+            background: #23272e; padding: 15px; border-radius: 12px; 
+            margin-bottom: 12px; display: flex; justify-content: space-between; 
+            border-right: 4px solid var(--main-blue); align-items: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer; position: relative; overflow: hidden;
+        }
+
+        /* تأثير التحويم (Hover) الذي برمجته */
+        .price-card:hover { 
+            background: #2b3139; transform: scale(1.03) translateX(-5px); 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4), 0 0 15px rgba(2,99,255,0.2);
+            border-right-width: 8px;
+        }
+
+        .price-value { font-family: monospace; font-weight: bold; font-size: 1.1em; color: var(--up-green); }
+
+        /* زر تسجيل الدخول: حل مشكلة الجمود */
+        .login-btn { 
+            background: var(--main-blue); color: white; border: none; 
+            padding: 8px 20px; border-radius: 5px; cursor: pointer; 
+            font-weight: bold; pointer-events: auto; transition: 0.3s;
+        }
+        .login-btn:hover { background: #0051d4; box-shadow: 0 0 15px rgba(2,99,255,0.4); }
+
+        /* فيديو الخلفية: pointer-events: none ضرورية لمنع حجب النقرات */
+        .bg-video { 
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+            opacity: 0.07; z-index: -1; object-fit: cover; pointer-events: none; 
+        }
+
+        .footer { 
+            height: 35px; background: var(--card); border-top: 1px solid #2b3139; 
+            display: flex; align-items: center; padding: 0 20px; 
+            justify-content: space-between; font-size: 12px; color: #848e9c; z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+    <video autoplay muted loop class="bg-video">
+        <source src="/static/1000017311.mp4" type="video/mp4">
+    </video>
+
+    <div class="app-shell">
+        <header class="header">
+            <div style="display:flex; align-items:center; gap:12px;">
+                <img src="/static/logo.png" width="25">
+                <span style="font-weight:bold; letter-spacing:1px;">EXCORA <span style="color:var(--main-blue)">PRO</span></span>
+            </div>
+            <button class="login-btn" onclick="alert('جاري الانتقال لبوابة الدخول...')">تسجيل الدخول</button>
+        </header>
+
+        <main class="main-workspace">
+            <div id="tv_chart_container"></div>
+
+            <aside class="sidebar">
+                <div style="color:var(--main-blue); font-weight:bold; font-size:12px; margin-bottom:15px;">Market Watch Live</div>
+                
+                <div class="price-card">
+                    <span id="btc" class="price-value">--.--</span>
+                    <span style="font-size:13px;">BTC/USDT</span>
+                </div>
+                
+                <div class="price-card">
+                    <span id="eth" class="price-value">--.--</span>
+                    <span style="font-size:13px;">ETH/USDT</span>
+                </div>
+
+                <div style="margin-top:auto; text-align:center;">
+                    <img src="/static/1000017310.jpg" style="width:100%; border-radius:12px; opacity:0.4; border: 1px solid #333;">
+                </div>
+            </aside>
+        </main>
+
+        <footer class="footer">
+            <div>نطاق: <b style="color:white">1D</b> | المؤشرات: <b style="color:white">SMC Active</b></div>
+            <div><span style="color:var(--up-green);">● مباشر</span> | UTC+3 Baghdad</div>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+        // تشغيل الشارت بالأدوات الاحترافية
+        new TradingView.widget({
+            "autosize": true,
+            "symbol": "BINANCE:BTCUSDT",
+            "interval": "15",
+            "theme": "dark",
+            "style": "1",
+            "locale": "ar",
+            "hide_side_toolbar": false, // إظهار أدوات الرسم
+            "allow_symbol_change": true,
+            "container_id": "tv_chart_container"
+        });
+
+        // ربط البيانات اللحظية
+        const ws = new WebSocket(`wss://stream.binance.com:9443/ws/btcusdt@ticker/ethusdt@ticker`);
+        ws.onmessage = (e) => {
+            const data = JSON.parse(e.data);
+            const id = data.s.toLowerCase().replace('usdt','');
+            const el = document.getElementById(id);
+            if(el) {
+                const price = parseFloat(data.c).toFixed(2);
+                const old = parseFloat(el.innerText);
+                el.innerText = price;
+                el.style.color = price >= old ? "var(--up-green)" : "var(--down-red)";
+            }
+        };
+    </script>
+</body>
+</html>

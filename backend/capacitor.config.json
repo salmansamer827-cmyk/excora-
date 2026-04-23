@@ -1,0 +1,8 @@
+# 1. نسخ ملفات الويب إلى مجلد الأندرويد
+npx cap copy
+
+# 2. مزامنة التعديلات (أدوات الرسم والشارت)
+npx cap sync
+
+# 3. فتح المشروع في Android Studio لإنتاج الـ APK
+npx cap open android

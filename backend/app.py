@@ -1,47 +1,29 @@
-import os
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi import FastAPI, Form
 from fastapi.staticfiles import StaticFiles
-import uvicorn
+from fastapi.responses import FileResponse, RedirectResponse
 
-# إنشاء تطبيق FastAPI
-app = FastAPI(title="EXCORA PRO API")
+app = FastAPI(title="EXCORA PRO Terminal")
 
-# 1. إعدادات CORS - تسمح للواجهة الأمامية بالاتصال بالسيرفر من أي مكان
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# ربط الصور والفيديوهات (logo.png, 1000017310.jpg, 1000017311.mp4)
+app.mount("/static", StaticFiles(directory="."), name="static")
 
-# 2. إعداد مسارات الملفات الثابتة (للتوافق مع Render و Acode)
-# نخرج من مجلد backend لنصل للمجلد الرئيسي EXCORA
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# نحدد مكان مجلد الصور: EXCORA/frontend/static
-STATIC_DIR = os.path.join(BASE_DIR, "frontend", "static")
+# بيانات الدخول (Username: admin | Password: excora2026)
+USER_DB = {"admin": "excora2026"}
 
-# التأكد من وجود المجلد وتفعيله
-if os.path.exists(STATIC_DIR):
-    app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
-    print(f"✅ Static files mounted successfully from: {STATIC_DIR}")
-else:
-    # هذا التنبيه سيظهر في Logs موقع Render إذا كان هناك خطأ في التسمية
-    print(f"❌ Warning: Static directory NOT found at {STATIC_DIR}")
-
-# 3. المسار الرئيسي لفحص الحالة
 @app.get("/")
-def home():
-    return {
-        "status": "EXCORA Engine Online",
-        "platform": "Render Cloud",
-        "developer": "Samer Salman",
-        "logo_path": "/static/logo.png"
-    }
+async def home():
+    return FileResponse('index.html')
 
-# 4. تشغيل السيرفر بما يتوافق مع بيئة Render السحابية
-if __name__ == "__main__":
-    # Render يخصص المنفذ تلقائياً عبر متغير البيئة PORT
-    port = int(os.environ.get("PORT", 8000))
-    uvicorn.run(app, host="0.0.0.0", port=port)
+@app.get("/login-page")
+async def login_page():
+    return FileResponse('login.html')
+
+@app.get("/dashboard")
+async def dashboard():
+    return FileResponse('dashboard.html')
+
+@app.post("/login")
+async def login(username: str = Form(...), password: str = Form(...)):
+    if username in USER_DB and USER_DB[username] == password:
+        return RedirectResponse(url="/dashboard", status_code=303)
+    return {"status": "error", "message": "بيانات الدخول غير صحيحة"}

@@ -1,0 +1,71 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<style>
+    /* 1. التنسيقات العامة للموبايل (Responsive Layout) */
+    @media (max-width: 480px) {
+        /* تحويل تخطيط الصفحة من أفقي إلى عمودي */
+        .main-layout { 
+            display: flex;
+            flex-direction: column !important; 
+            height: calc(100vh - 110px); /* ترك مساحة للهيدر والفوتر */
+        }
+
+        /* ضبط الشارت ليكون في الأعلى ويأخذ مساحة الرؤية الكبرى */
+        #tv_chart_container {
+            height: 60vh !important; 
+            width: 100% !important;
+            order: 1; /* الشارت أولاً */
+        }
+
+        /* تحويل قائمة المراقبة لتكون أسفل الشارت */
+        .sidebar {
+            width: 100% !important;
+            height: auto !important;
+            order: 2; /* القائمة ثانياً */
+            border-left: none !important;
+            border-top: 1px solid #2b3139;
+            padding: 15px;
+            background: #181a20;
+            overflow-y: auto; /* السماح بالتمرير داخل القائمة فقط */
+        }
+
+        /* تعديل كروت الأسعار لتناسب عرض الشاشة */
+        .price-card {
+            margin-bottom: 8px;
+            padding: 12px;
+        }
+    }
+
+    /* 2. زر تسجيل الدخول الاحترافي (نمط باينانس) */
+    .login-btn {
+        background-color: #0263FF; /* لون EXCORA الرسمي */
+        color: #ffffff;
+        border: none;
+        width: 100%; /* العرض كامل للموبايل */
+        padding: 12px 20px; 
+        font-size: 16px; 
+        font-weight: 700;
+        border-radius: 8px; 
+        cursor: pointer;
+        text-align: center;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        display: block;
+    }
+
+    .login-btn:active {
+        transform: scale(0.96); /* تأثير الضغط للموبايل */
+        background-color: #0051d4;
+    }
+
+    /* 3. لمسات نهائية لنظافة الكود ومنع أخطاء اللمس */
+    * {
+        -webkit-tap-highlight-color: transparent; /* منع الوميض الأزرق عند اللمس */
+        box-sizing: border-box;
+    }
+
+    /* إخفاء العناصر غير الضرورية على الشاشات الصغيرة جداً */
+    @media (max-width: 350px) {
+        .footer-info { display: none; }
+    }
+</style>
