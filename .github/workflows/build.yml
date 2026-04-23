@@ -1,29 +1,23 @@
 name: Build APK
-on: [push]
+on: [push, workflow_dispatch]
 jobs:
-  android-build:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
-
-      - name: Set up Java
+      - uses: actions/checkout@v3
+      - name: set up JDK 11
         uses: actions/setup-java@v3
         with:
           java-version: '11'
           distribution: 'temurin'
-
-      - name: Build Debug APK
+      - name: Build with Gradle
         run: |
-          if [ -d "android" ]; then
-            cd android && chmod +x gradlew && ./gradlew assembleDebug
-          else
-            echo "Android directory not found!" && exit 1
-          fi
-
-      - name: Upload Artifact
+          chmod +x $(find . -name gradlew)
+          GRADLE_PATH=$(find . -name gradlew | head -n 1)
+          $GRADLE_PATH assembleDebug
+      - name: Upload APK
         uses: actions/upload-artifact@v3
         with:
           name: EXCORA-PRO-V1
-          path: android/app/build/outputs/apk/debug/*.apk
+          path: "**/*.apk"
 
