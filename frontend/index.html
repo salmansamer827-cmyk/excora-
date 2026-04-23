@@ -1,56 +1,27 @@
-/* تحديث كرت العملة ليكون تفاعلياً بالكامل */
-.price-card { 
-    background: var(--card); 
-    padding: 15px; 
-    border-radius: 12px; 
-    margin-bottom: 12px; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;
-    border-right: 4px solid var(--main-blue);
-    
-    /* سرعة التحول وسلاسته */
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-/* تأثير تحريك الماوس (Hover Effect) */
-.price-card:hover { 
-    background: #1e2126; /* تفتيح بسيط للخلفية */
-    transform: scale(1.03) translateX(-5px); /* تكبير طفيف مع إزاحة لليسار */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 
-                0 0 15px rgba(2, 99, 255, 0.2); /* ظل ناعم مع توهج أزرق */
-    border-right-width: 8px; /* زيادة سمك الشريط الجانبي عند الاختيار */
-}
-
-/* إضافة لمسة ضوئية تمر فوق الكرت (Gloss Effect) */
-.price-card::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -60%;
-    width: 20%;
-    height: 200%;
-    background: rgba(255, 255, 255, 0.05);
-    transform: rotate(30deg);
-    transition: all 0.6s ease;
-}
-
-.price-card:hover::after {
-    left: 120%;
-}
-
-/* تنسيق النصوص داخل الكرت لضمان السلاسة */
-.price-value {
-    font-family: 'ExcorArabic', monospace; /* استخدام خطك الخاص */
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: var(--up-green);
-    transition: color 0.3s ease;
-}
-
-.price-card:hover .price-value {
-    text-shadow: 0 0 8px rgba(0, 255, 136, 0.5); /* توهج للسعر عند التحويم */
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Excora Live</title>
+    <style>
+        body { background: #000; color: #0f0; font-family: monospace; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .box { border: 1px solid #0f0; padding: 20px; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>EXCORA TERMINAL</h1>
+        <div id="price">Loading...</div>
+    </div>
+    <script>
+        async function fetchPrice() {
+            try {
+                const res = await fetch('http://127.0.0.1:8000/api/market/price');
+                const data = await res.json();
+                document.getElementById('price').innerText = data.symbol + ": $" + data.price;
+            } catch { document.getElementById('price').innerText = "Backend Offline"; }
+        }
+        setInterval(fetchPrice, 3000);
+        fetchPrice();
+    </script>
+</body>
+</html>
