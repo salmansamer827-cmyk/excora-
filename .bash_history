@@ -1,5 +1,3 @@
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 10000))
 ls
 nano app.py
 nano requirements.txt
@@ -498,3 +496,5 @@ flutter pub get
 # إذا أردت تحديث الأداة لنسخة أكثر استقراراً
 flutter upgrade
 proot-distro login ubuntu
+​Root Directory
+To https://github.com/...
