@@ -1,6 +1,6 @@
 [user]
-	name = YourName
-	email = your@email.com
+	name = Samer Salman
+	email = your-email@example.com
 [credential "https://github.com"]
 	helper = 
 	helper = !/data/data/com.termux/files/usr/bin/gh auth git-credential
@@ -10,3 +10,4 @@
 [safe]
 	directory = /storage/emulated/0/.FileManagerRecycler/-539050831_PassiveBot_temp/ExcorArabicFont
 	directory = /storage/emulated/0/.FileManagerRecycler/-539050831_PassiveBot_temp/ExcorArabicFont
+	directory = /storage/emulated/0/EXCORA

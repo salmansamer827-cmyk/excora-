@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Excora Live</title>
+    <style>
+        body { background: #000; color: #0f0; font-family: monospace; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .box { border: 1px solid #0f0; padding: 20px; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>EXCORA TERMINAL</h1>
+        <div id="price">Loading...</div>
+    </div>
+    <script>
+        async function fetchPrice() {
+            try {
+                const res = await fetch('http://127.0.0.1:8000/api/market/price');
+                const data = await res.json();
+                document.getElementById('price').innerText = data.symbol + ": $" + data.price;
+            } catch { document.getElementById('price').innerText = "Backend Offline"; }
+        }
+        setInterval(fetchPrice, 3000);
+        fetchPrice();
+    </script>
+</body>
+</html>

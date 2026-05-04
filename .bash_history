@@ -1,500 +1,500 @@
-    pen.closePath()
-
-def draw_beh_base(pen, thick):
-    w = 600
-    pen.moveTo((50, 200)); pen.lineTo((50, 0)); pen.lineTo((50 + w, 0)); pen.lineTo((50 + w, 200))
-    pen.lineTo((50 + w - thick, 200)); pen.lineTo((50 + w - thick, thick))
-    pen.lineTo((50 + thick, thick)); pen.lineTo((50 + thick, 200))
-    pen.closePath()
-
-def create_font_variant(name, thick):
-    fb = FontBuilder(1000, isTTF=True)
-    glyphs = {".notdef": TTGlyphPen(None).getGlyph()}
-    cmap = {}
-    for g_name, func, code in [("alef-ar", draw_alef, 0x0627), ("beh-ar", draw_beh_base, 0x0628)]:
-        pen = TTGlyphPen(None)
-        func(pen, thick)
-        glyphs[g_name] = pen.getGlyph()
-        cmap[code] = g_name
-    dot_pen = TTGlyphPen(None)
-    draw_dot(dot_pen, 300, -150, thick)
-    glyphs["dot-ar"] = dot_pen.getGlyph()
-    fb.setupGlyphOrder(list(glyphs.keys()))
-    fb.setupGlyf(glyphs)
-    fb.setupCharacterMap(cmap)
-    fb.setupNameTable({"familyName": "ExcorArabic", "styleName": name})
-    fb.setupOS2(sTypoAscender=750, usWinAscent=900, usWinDescent=400)
-    fb.setupPost()
-    os.makedirs("builds", exist_ok=True)
-    fb.save(f"builds/ExcorArabic-{name}.ttf")
-    print(f"✅ Created: {name}")
-
 if __name__ == "__main__":
-    weights = {"Light": 30, "Regular": 70, "Medium": 110, "Bold": 170}
-    for n, t in weights.items():
-        create_font_variant(n, t)
-EOF
-
-# تشغيل البناء
-python build_masters.py
-# ستظهر لك رسائل النجاح للأوزان الأربعة ✅
+    port = int(os.environ.get("PORT", 10000))
+ls
+nano app.py
+nano requirements.txt
+pip install -r requirements.txt
+python app.py
+sudo apt install certbot
+sudo certbot certonly --standalone -d yourdomain.com
 git add .
-git commit -m "Relocated project to Termux home and fixed builder script"
+git commit -m "first commit EXCORA"
+git push -u origin main
+cd ~/EXCORA
+ls
+git add .
+git commit -m "first commit EXCORA"
+git push -u origin main
+GitHub
+git remote set-url origin https://USERNAME@github.com/USERNAME/EXCORA.git
+git push -u origin main
+git remote set-url origin https://github.com/salmansamer827-cmyk/EXCORA_.git
+git push -u origin main
+salmansamer827-cmyk
+git remote set-url origin https://TOKEN@github.com/salmansamer827-cmyk/EXCORA_.git
 git push
-cat <<EOF > build_masters.py
-import os
-from fontTools.fontBuilder import FontBuilder
-from fontTools.pens.ttGlyphPen import TTGlyphPen
-
-def draw_dot(pen, x, y, thick):
-    size = thick * 1.2
-    pen.moveTo((x, y))
-    pen.lineTo((x + size, y))
-    pen.lineTo((x + size, y + size))
-    pen.lineTo((x, y + size))
-    pen.closePath()
-
-def draw_alef(pen, thick):
-    pen.moveTo((100, 0)); pen.lineTo((100, 700))
-    pen.lineTo((100 + thick, 700)); pen.lineTo((100 + thick, 0))
-    pen.closePath()
-
-def draw_beh_base(pen, thick):
-    w = 600
-    pen.moveTo((50, 200)); pen.lineTo((50, 0)); pen.lineTo((50 + w, 0)); pen.lineTo((50 + w, 200))
-    pen.lineTo((50 + w - thick, 200)); pen.lineTo((50 + w - thick, thick))
-    pen.lineTo((50 + thick, thick)); pen.lineTo((50 + thick, 200))
-    pen.closePath()
-
-def create_font_variant(name, thick):
-    fb = FontBuilder(1000, isTTF=True)
-    
-    # تصحيح دالة الحصول على الجليف: glyph() بدلاً من getGlyph()
-    glyphs = {".notdef": TTGlyphPen(None).glyph()}
-    cmap = {}
-    
-    for g_name, func, code in [("alef-ar", draw_alef, 0x0627), ("beh-ar", draw_beh_base, 0x0628)]:
-        pen = TTGlyphPen(None)
-        func(pen, thick)
-        glyphs[g_name] = pen.glyph()
-        cmap[code] = g_name
-
-    dot_pen = TTGlyphPen(None)
-    draw_dot(dot_pen, 300, -150, thick)
-    glyphs["dot-ar"] = dot_pen.glyph()
-
-    fb.setupGlyphOrder(list(glyphs.keys()))
-    fb.setupGlyf(glyphs)
-    fb.setupCharacterMap(cmap)
-    fb.setupNameTable({"familyName": "ExcorArabic", "styleName": name})
-    fb.setupOS2(sTypoAscender=750, usWinAscent=900, usWinDescent=400)
-    fb.setupPost()
-    
-    os.makedirs("builds", exist_ok=True)
-    fb.save(f"builds/ExcorArabic-{name}.ttf")
-    print(f"✅ تم بناء الوزن: {name}")
-
-if __name__ == "__main__":
-    weights = {"Light": 30, "Regular": 70, "Medium": 110, "Bold": 170}
-    for n, t in weights.items():
-        create_font_variant(n, t)
-EOF
-
-# تشغيل بناء الخطوط
-python build_masters.py
-# رفع التعديلات النهائية إلى GitHub
-git add build_masters.py
-git commit -m "Fix: correct glyph() method in build script"
+git push --set-upstream origin main
+pip freeze > requirements.txt
+git config --global user.name "salmansamer827-cmyk"
+git config --global user.email "your@email.com"
+git remote set-url origin https://TOKEN@github.com/salmansamer827-cmyk/EXCORA_.git
+git add .
+git commit -m "update"
 git push
+pip freeze > requirements.txt
+echo "web: python app.py" > Procfile
 import os
-from fontTools.fontBuilder import FontBuilder
-from fontTools.pens.ttGlyphPen import TTGlyphPen
-def draw_dot(pen, x, y, thick):
-if __name__ == "__main__":;     weights = {"Light": 30, "Regular": 70, "Medium": 110, "Bold": 170};     for n, t in weights.items():
-cat <<EOF > build_masters.py
-import os
-from fontTools.fontBuilder import FontBuilder
-from fontTools.pens.ttGlyphPen import TTGlyphPen
-
-def draw_dot(pen, x, y, thick):
-    size = thick * 1.2
-    pen.moveTo((x, y)); pen.lineTo((x + size, y))
-    pen.lineTo((x + size, y + size)); pen.lineTo((x, y + size))
-    pen.closePath()
-
-def draw_alef(pen, thick):
-    pen.moveTo((100, 0)); pen.lineTo((100, 700))
-    pen.lineTo((100 + thick, 700)); pen.lineTo((100 + thick, 0))
-    pen.closePath()
-
-def draw_beh_base(pen, thick):
-    w = 600
-    pen.moveTo((50, 200)); pen.lineTo((50, 0)); pen.lineTo((50 + w, 0)); pen.lineTo((50 + w, 200))
-    pen.lineTo((50 + w - thick, 200)); pen.lineTo((50 + w - thick, thick))
-    pen.lineTo((50 + thick, thick)); pen.lineTo((50 + thick, 200))
-    pen.closePath()
-
-def create_font_variant(name, thick):
-    fb = FontBuilder(1000, isTTF=True)
-    glyphs = {".notdef": TTGlyphPen(None).glyph()}
-    cmap = {}
-    metrics = {".notdef": (0, 0)}
-    for g_name, func, code in [("alef-ar", draw_alef, 0x0627), ("beh-ar", draw_beh_base, 0x0628)]:
-        pen = TTGlyphPen(None)
-        func(pen, thick)
-        glyphs[g_name] = pen.glyph()
-        cmap[code] = g_name
-        metrics[g_name] = (800, 100)
-    dot_pen = TTGlyphPen(None)
-    draw_dot(dot_pen, 300, -150, thick)
-    glyphs["dot-ar"] = dot_pen.glyph()
-    metrics["dot-ar"] = (0, 0)
-    fb.setupGlyphOrder(list(glyphs.keys()))
-    fb.setupGlyf(glyphs)
-    fb.setupCharacterMap(cmap)
-    fb.setupHorizontalMetrics(metrics)
-    fb.setupNameTable({"familyName": "ExcorArabic", "styleName": name})
-    fb.setupOS2(sTypoAscender=750, usWinAscent=900, usWinDescent=400)
-    fb.setupPost()
-    os.makedirs("builds", exist_ok=True)
-    fb.save(f"builds/ExcorArabic-{name}.ttf")
-    print(f"✅ تم بناء الوزن: {name}")
-
-if __name__ == "__main__":
-    weights = {"Light": 30, "Regular": 70, "Medium": 110, "Bold": 170}
-    for n, t in weights.items():
-        create_font_variant(n, t)
-EOF
-
-python build_masters.py
-git add build_masters.py
-git commit -m "Fix: correctly formatted build script"
+port = int(os.environ.get("PORT", 5000))
+app.run(host="0.0.0.0", port=port)
+git add .
+git commit -m "ready for render"
 git push
-cat <<EOF > build_masters.py
-import os
-from fontTools.fontBuilder import FontBuilder
-from fontTools.pens.ttGlyphPen import TTGlyphPen
-
-# --- دالات الرسم الهندسي ---
-def draw_dot(pen, x, y, thick):
-    size = thick * 1.3
-    pen.moveTo((x, y)); pen.lineTo((x + size, y))
-    pen.lineTo((x + size, y + size)); pen.lineTo((x, y + size))
-    pen.closePath()
-
-def draw_alef(pen, thick):
-    pen.moveTo((100, 0)); pen.lineTo((100, 750))
-    pen.lineTo((100 + thick, 750)); pen.lineTo((100 + thick, 0))
-    pen.closePath()
-
-def draw_beh_base(pen, thick):
-    w = 650
-    pen.moveTo((50, 200)); pen.lineTo((50, 0)); pen.lineTo((50 + w, 0)); pen.lineTo((50 + w, 200))
-    pen.lineTo((50 + w - thick, 200)); pen.lineTo((50 + w - thick, thick))
-    pen.lineTo((50 + thick, thick)); pen.lineTo((50 + thick, 200))
-    pen.closePath()
-
-def draw_noon_base(pen, thick):
-    # رسم منحنى النون باستخدام Quadratic Bezier لجمالية احترافية
-    pen.moveTo((100, 300))
-    pen.qCurveTo((100, -150), (400, -150), (700, 300))
-    pen.lineTo((700 - thick, 300))
-    pen.qCurveTo((400, -150 + thick), (100 + thick, 300))
-    pen.closePath()
-
-# --- المحرك الرئيسي ---
-def create_font_variant(name, thick):
-    fb = FontBuilder(1000, isTTF=True)
-    glyphs = {".notdef": TTGlyphPen(None).glyph()}
-    cmap = {}
-    metrics = {".notdef": (0, 0)}
-
-    # مصفوفة الحروف الكاملة
-    char_map = [
-        ("alef-ar", draw_alef, 0x0627, 850),
-        ("beh-ar", draw_beh_base, 0x0628, 850),
-        ("noon-ar", draw_noon_base, 0x0646, 850)
-    ]
-
-    for g_name, func, code, width in char_map:
-        pen = TTGlyphPen(None)
-        func(pen, thick)
-        glyphs[g_name] = pen.glyph()
-        cmap[code] = g_name
-        metrics[g_name] = (width, 100)
-
-    # إضافة النقاط (مثال لنقطة الباء)
-    dot_pen = TTGlyphPen(None)
-    draw_dot(dot_pen, 300, -180, thick)
-    glyphs["dot-ar"] = dot_pen.glyph()
-    metrics["dot-ar"] = (0, 0)
-
-    # الترتيب الصحيح للجداول (Crucial Fix)
-    fb.setupGlyphOrder(list(glyphs.keys()))
-    fb.setupGlyf(glyphs)
-    fb.setupCharacterMap(cmap)
-    fb.setupHorizontalMetrics(metrics) # يجب أن يسبق OS/2
-    
-    fb.setupNameTable({
-        "familyName": "ExcorArabic",
-        "styleName": name,
-        "uniqueFontIdentifier": f"ExcorArabic-{name}",
-        "fullName": f"ExcorArabic {name}",
-        "psName": f"ExcorArabic-{name}"
-    })
-    
-    fb.setupOS2(sTypoAscender=750, usWinAscent=950, usWinDescent=450)
-    fb.setupPost()
-    
-    os.makedirs("builds", exist_ok=True)
-    fb.save(f"builds/ExcorArabic-{name}.ttf")
-    print(f"✅ تم بنجاح تصدير الوزن: {name}")
-
-if __name__ == "__main__":
-    # الأوزان الأربعة القياسية
-    weights = {"Light": 35, "Regular": 75, "Medium": 120, "Bold": 180}
-    for n, t in weights.items():
-        create_font_variant(n, t)
-EOF
-
-# 1. بناء ملفات الـ TTF للأوزان الأربعة
-python build_masters.py
-# 2. رفع النسخة النهائية والمستقرة إلى GitHub
-git add build_masters.py
-git commit -m "Final build engine: Added curves support and fixed table sequencing"
+git add .
+git commit -m "set python version"
 git push
-ls ~/ExcorArabicFont/builds
+pkg install python
+pkg install elixir~
+python app.py
+def hello do
+end~
+def hello():
+app.py
+requirements.txt
+Procfile
+runtime.txt
+python-3.11.9
+web: gunicorn app:app
+flask
+gunicorn
+git add .
+git commit -m "fix python render"
+git push
+pip install -r requirements.txt
+gunicorn app:app
+pkg install git
+git init
+git add .
+git commit -m "first deploy"
+git branch -M main
+git remote add origin https://github.com/USERNAME/REPO.git
+git push -u origin main
+git add .
+git commit -m "fix render error"
+git push
+pkg install python
+pip install flask gunicorn
+python main.py
+http://localhost:5000
+git pull origin main --rebase
+git push origin main
+python app.py
+cd ~/EXCORA
+ls
+git pull origin main --rebase
+git push origin main
+can't open file '/EXCORA/main.py'
+python app.py
+~
+gunicorn app:app
+app = Flask(__name__)
+flask
+gunicorn
+gunicorn app:app
+gunicorn app:app
+app = Flask(__name__)
+gunicorn app:app --bind 0.0.0.0:$PORT
+gunicorn app:app --bind 0.0.0.0:8000
+==> Cloning from https://github.com/salmansamer827-cmyk/EXCORA_
+Menu
+==> Checking out commit 4797d326789a63a0ff1602d4c1e729c8801049b3 in branch main
+==> Using Python version 3.14.3 (default)
+==> Docs on specifying a Python version: https://render.com/docs/python-version
+==> Installing Python version 3.14.3...
+==> Using Poetry version 2.1.3 (default)
+==> Docs on specifying a Poetry version: https://render.com/docs/poetry-version
+==> Running build command 'pip install -r requirements.txt.'...
+[notice] A new release of pip is available: 25.3 -> 26.0.1
+[notice] To update, run: pip install --upgrade pip
+ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt.'
+==> Build failed 😞
+==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+Need better ways to work with logs? Try theRender CLI, Render MCP Server, or set up a log stream 
+flask
+gunicorn
+git add .
+git commit -m "add socket correctly"
+git push origin main
+export FLASK_APP=app.py
+flask run
+gunicorn app:app --bind 0.0.0.0:8000
+rm -f 26.0.1 Build Checking Cloning Common Docs Installing Running
+nano .gitignore
+git add .
+git commit -m "cleanup project"
+git push origin main
+git rm -r --cached excorenv
+nano .gitignore
+git add .
+git commit -m "remove virtual environment"
+git push origin main
+pkg update && pkg upgrade -y
+pkg install proot-distro -y
+proot-distro install ubuntu
+proot-distro login ubuntu
+adduser user
+su user
+pkg update
+pkg install openjdk-17
+apt update && apt upgrade -y
+apt install git nano -y
+# اذهب لمجلد الـ storage الخاص بالأندرويد
+cd /sdcard/اسم_مجلد_مشروعك
+mkdir -p templates
+nano templates/index.html
+pip install flask
+# 1. إضافة كل التغييرات الجديدة
+git add .
+# 2. تسجيل التحديث
+git commit -m "إطلاق واجهة EXCORA PRO VIP النهائية"
+# 3. الرفع للسيرفر
+git push origin main
+ls -R
+nano app.py
+# إضافة المجلد يدوياً للتأكد
+git add templates/index.html
+git add app.py
+# تسجيل التغيير
+git commit -m "Fix: Route to templates/index.html"
+# الرفع بالقوة
+git push origin main
+git add .
+git commit -m "Final Live Dashboard with Charts"
+git push origin main
+git add .
+git commit -m "Final Live Dashboard with Charts"
+git push origin main
+nano app.py
+nano templates/index.html
+git add .
+git commit -m "Full Application Launch - Live Charts"
+git push origin main
+from flask import Flask, render_template
+import os
+app = Flask(__name__)
+@app.route('/')
+def home():
+if __name__ == "__main__":;     port = int(os.environ.get("PORT", 5000))
+nano app.py
+nano templates/index.html
+git add .
+git commit -m "Launch EXCORA PRO LIVE"
+git push origin main
+git pull origin main --rebase
+git push origin main
+cd ~/EXCORA
+python app.py
+pkg update
+pkg upgrade
+pkg install python git
+pip install buildozer
+requirements = python3,fastapi,sqlalchemy
+pkg update && pkg upgrade
+pkg install python git
+pip install kivy buildozer
+YOUR-IP
+buildozer init
+requirements = python3,kivy,requests
+source.include_exts = py,png,jpg,kv
+buildozer -v android debug
+cd bin
+*.apk
+# إنشاء البيئة (لو ما عملتها)
+python3 -m venv ~/excorenv
+# تفعيل البيئة
+source ~/excorenv/bin/activate
+# تحديث pip و setuptools و wheel
+pip install --upgrade pip setuptools wheel
+# تثبيت Rust الرسمي
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+source $HOME/.cargo/env
+# تثبيت الإصدار المستقر
+rustup install stable
+rustup default stable
+# تحقق من التثبيت
+rustc --version
+cargo --version
+pip install fastapi uvicorn sqlalchemy pymysql python-dotenv
+pip install kivy kivymd plyer requests matplotlib
+pip install rich
+pip install --force-reinstall --no-cache-dir pydantic-core
+mkdir -p ~/ExcorArabicFont/fonts
+curl -L -o ~/ExcorArabicFont/fonts/SamerArabic.ttf https://github.com/google/fonts/raw/main/ofl/cairo/Cairo-Regular.ttf
+from kivy.app import App
+from kivy.uix.label import Label
+class TestApp(App):
+if __name__ == "__main__":;     TestApp().run()
+uvicorn excora_pro:app --reload --host 0.0.0.0 --port 8000
+pkg install git
+git config --global user.name "اسمك"
+git config --global user.email "ايميلك"
+cd ~/ExcorArabicFont
+git init
+nano .gitignore
+git add .
+git commit -m "Initial commit EXCORA project"
+git remote remove origin
+git remote add origin URL_HERE
+git remote add origin https://github.com/username/EXCORA.git
+git remote -v
+https://github.com/username/EXCORA.git
+git remote add origin https://github.com/username/EXCORA.git
+git branch -M main
+git push -u origin main
+cd ~/ExcorArabicFont
+git remote add origin https://github.com/username/EXCORA.git
+mkdir -p ~/ExcorArabicFont/templates
+nano ~/ExcorArabicFont/templates/index.html
+nano ~/ExcorArabicFont/excora_pro.py
+cd ~/ExcorArabicFont
+source ~/excorenv/bin/activate
+uvicorn excora_pro:app --reload --host 0.0.0.0 --port 8000
+http://127.0.0.1:8000
+core/analyzer.py
+nano ~/ExcorArabicFont/templates/index.html
+pkill -f uvicorn
+uvicorn excora_pro:app --reload --host 0.0.0.0 --port 8000
+pkill -f uvicorn
+uvicorn excora_pro:app --reload --host 0.0.0.0 --port 8000
+source ~/excorenv/bin/activate
+pip install jinja2 fastapi uvicorn
+pip install jinja2 aiofiles python-multipart
+pkill -f uvicorn
+uvicorn excora_pro:app --reload --host 0.0.0.0 --port 8000
+cd ~/ExcorArabicFont
+source ~/excorenv/bin/activate
+mkdir -p templates static/css static/js static/images fonts kv core
+ls fonts/
+# يجب أن يظهر SamerArabic.ttf
+pip install jinja2
+uvicorn excora_pro:app --reload --host 0.0.0.0 --port 8000
+Cairo-Regular.ttf
+IBM Plex Sans Arabic
+font_name="fonts/SamerArabic.ttf"
+font_name="fonts/Cairo-Regular.ttf"
+cd ~/ExcorArabicFont/fonts
+curl -L -o Cairo-Regular.ttf https://github.com/google/fonts/raw/main/ofl/cairo/Cairo-Regular.ttf
+mkdir -p ~/ExcorArabicFont/templates
+mv ~/ExcorArabicFont/index.html ~/ExcorArabicFont/templates/index.html
+ls ~/ExcorArabicFont/templates
+mkdir -p ~/ExcorArabicFont/static/js
+mkdir -p ~/ExcorArabicFont/static/css
+mkdir -p ~/ExcorArabicFont/static/images
+mv ~/ExcorArabicFont/js/* ~/ExcorArabicFont/static/js/
+mv ~/ExcorArabicFont/css/* ~/ExcorArabicFont/static/css/
+mv ~/ExcorArabicFont/images/* ~/ExcorArabicFont/static/images/
+ls ~/ExcorArabicFont/static/js
+ls ~/ExcorArabicFont/static/css
+ls ~/ExcorArabicFont/static/images
+<link rel="stylesheet" href="/static/css/style.css">
+<script src="/static/js/script.js"></script>
+fastapi
+uvicorn
+jinja2
+requests
+starlette
+# تفعيل البيئة
+source ~/excorenv/bin/activate
+# تثبيت المكتبات
+pip install -r requirements.txt
+# تشغيل السيرفر
+uvicorn excora_pro:app --reload --host 0.0.0.0 --port 8000
+cd ~/ExcorArabicFont
+source ~/excorenv/bin/activate
+ls
+# يجب أن ترى: excora_pro.py  main.py  templates/  static/  fonts/  requirements.txt
+pip install -r requirements.txt
+uvicorn excora_pro:app --reload --host 0.0.0.0 --port 8000
+cd ~/ExcorArabicFont
+source ~/excorenv/bin/activate
+ls
+# يجب أن ترى:
+# excora_pro.py  main.py  templates/  static/  fonts/  requirements.txt
+pip install --upgrade pip
+pip install -r requirements.txt
+fastapi
+uvicorn
+jinja2
+requests
+starlette
+source ~/excorenv/bin/activate
+pip install fastapi uvicorn jinja2 requests starlette
+pip list
+uvicorn excora_pro:app --reload --host 0.0.0.0 --port 8000
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [...]
+INFO:     Application startup complete.
 cd ~/ExcorArabicFont
 ls
-ls builds/
-pkg install rclone
-rclone config
-# هذا الأمر سينشئ مجلدًا في درايف باسم ExcorProject وينقل الخطوط إليه
-rclone copy ~/ExcorArabicFont/builds GDrive:ExcorProject -P
-import matplotlib.pyplot as plt
-import matplotlib.font_manager as fm
-# مسار ملف الخط الذي صنعته
-font_path = '/data/data/com.termux/files/home/ExcorArabicFont/builds/ExcorArabic-Bold.ttf'
-prop = fm.FontProperties(fname=font_path)
-plt.text(0.5, 0.5, 'أ ب ت ث ج ح خ', fontproperties=prop, fontsize=40, ha='center')
-plt.show()
-fc-query ~/ExcorArabicFont/builds/ExcorArabic-Bold.ttf | grep "fullname"
-# لعرض معلومات تقنية عن ملف الخط الذي صنعته
-fc-query ~/ExcorArabicFont/builds/ExcorArabic-Bold.ttf | grep "fullname"
-pkg install fontconfig-utils
-fc-query ~/ExcorArabicFont/builds/ExcorArabic-Bold.ttf | grep "fullname"
-termux-setup-storage
-cp -r ~/ExcorArabicFont/builds /sdcard/Download/ExcorFonts
-rclone sync ~/ExcorArabicFont/builds GDrive:ExcorProject -P
-gh auth login
-Authenticate Git with your GitHub credentials
-Authenticate Git
-gh auth login
-nano buildozer.spec
-android.permissions = INTERNET, VIBRATE, WAKE_LOCK
-pkg install binutils-is-llvm libcanvas-static zlib libjpeg-turbo -y
-./build.sh
-# حذف أي ملفات قديمة معطوبة
-rm -rf .buildozer/
-rm -rf bin/
-# تثبيت المكتبات التي سببت لك الصداع (Zlib وغيرها) بأمر واحد
+# يجب أن ترى excora_pro.py
+# تفعيل البيئة الافتراضية (لو لم تكن مفعلة)
+source ~/excorenv/bin/activate
+# تثبيت مكتبات FastAPI وكل ما يحتاجه المشروع
+pip install --upgrade pip
+pip install fastapi uvicorn jinja2 requests python-multipart
+# بعد التثبيت شغل السيرفر
+pkill -f uvicorn  # يغلق أي سيرفر شغال مسبقًا
+uvicorn excora_pro:app --reload --host 0.0.0.0 --port 8000
+source ~/excorenv/bin/activate
+pip install --upgrade pip
+pip install fastapi uvicorn jinja2 requests python-multipart
+python -c "import jinja2; print(jinja2.__version__)"
+pkill -f uvicorn
+uvicorn excora_pro:app --reload --host 0.0.0.0 --port 8000
+INFO:     Uvicorn running on http://0.0.0.0:8000
+INFO:     Application startup complete.
+uvicorn excora_pro:app --reload --host 0.0.0.0 --port 8000
+source ~/excorenv/bin/activate
+pip install jinja2
+pip install fastapi uvicorn jinja2 requests python-multipart
+python -c "import jinja2; print(jinja2.__version__)"
+pkill -f uvicorn
+uvicorn excora_pro:app --reload --host 0.0.0.0 --port 8000
+pip install jinja2
+pkg install build-essential python-dev
+pkill -f uvicorn
+source ~/excorenv/bin/activate
+uvicorn excora_pro:app --reload --host 0.0.0.0 --port 8000
+pkill -f uvicorn
+source ~/excorenv/bin/activate
+uvicorn excora_pro:app --reload --host 0.0.0.0 --port 8000
+nano templates/index.html
+static/images/logo.png
+logo.png
+python --version
+Python 3.11.x
+rm -rf ~/excorenv
+pkg install python
+python -m venv ~/excorenv
+source ~/excorenv/bin/activate
+pip install --upgrade pip
+pip install fastapi uvicorn jinja2 requests python-multipart
+cd ~/ExcorArabicFont
+uvicorn excora_pro:app --reload --host 0.0.0.0 --port 8000
+npm install @prisma/client
+npm install prisma --save-dev
+npx prisma init
+npx prisma migrate dev --name init
+npm install mongoose
+sudo apt update && sudo apt upgrade -y
+sudo apt install nodejs npm git curl build-essential
+sudo apt install postgresql postgresql-contrib redis-server mongodb
 pkg update && pkg upgrade -y
-pkg install clang python libffi openssl zlib libjpeg-turbo binutils ndk-sysroot -y
-# حذف الملف القديم
-rm buildozer.spec
-# إنشاء ملف جديد
-buildozer init
-# أمر سحري لتعديل المتطلبات برمجياً (بدون دخول المحرر)
-sed -i 's/requirements = python3,kivy/requirements = python3,kivy,kivymd,certifi,plyer,requests/g' buildozer.spec
-cat main.py
-buildozer -v android debug
-pkg install libandroid-support-dev zlib-dev libjpeg-turbo-dev binutils -y
-ln -s $PREFIX/include/zlib.h $PREFIX/include/zconf.h .
-rm -rf .buildozer/android/platform/build-target
-buildozer -v android debug
-pkg install ndk-sysroot-gcc-compact libiconv libjpeg-turbo zlib -y
-# إنشاء روابط لملفات zlib في مجلد المشروع
-cp $PREFIX/include/zlib.h .
-cp $PREFIX/include/zconf.h .
-# إخبار النظام بمكان المكتبات أثناء البناء
-export CFLAGS="-I$PREFIX/include"
-export LDFLAGS="-L$PREFIX/lib"
-buildozer android clean
-buildozer -v android debug
+pkg install nodejs-lts
+node -v
+npm -v
+npx -v
+cd ~/ExcorArabicFont
+npm install prisma @prisma/client mongoose axios ioredis express cors
 pkg update && pkg upgrade -y
-pkg install clang python libffi openssl zlib libjpeg-turbo binutils ndk-sysroot ncurses-utils -y
-# إنشاء روابط لملفات التطوير في المجلد الحالي لضمان رؤيتها
-ln -s $PREFIX/include/zlib.h .
-ln -s $PREFIX/include/zconf.h .
-# تحديث أداة Buildozer نفسها لضمان التوافق مع Python 3.13
-pip install --upgrade buildozer
-# حذف الملف القديم تماماً لضمان عدم وجود أحرف مخفية
-rm buildozer.spec
-# إنشاء ملف جديد وافتراضي
-buildozer init
-# تعديل المتطلبات برمجياً لتشمل ما يحتاجه EXCORA PRO
-sed -i 's/requirements = python3,kivy/requirements = python3,kivy,kivymd,certifi,plyer,requests/g' buildozer.spec
-buildozer -v android debug
-pkg install python-pip clang make binutils abc-path zlib zlib-static libjpeg-turbo ndk-sysroot -y
-# إنشاء روابط في مسار النظام ليفهمها المترجم
-cp $PREFIX/include/zlib.h $PREFIX/include/zconf.h .
-export CPATH=$PREFIX/include
-export LIBRARY_PATH=$PREFIX/lib
-# تثبيت أدوات بناء متوافقة مع الأندرويد مباشرة
-pkg install ndk-sysroot-gcc-compact -y
-# تشغيل البناء مع تجاوز فحص النظام للمكتبات
-export APP_ZLIB=1
-buildozer -v android debug
-pkg install android-tools -y
-adb logcat *:S python:D
-build.sh
-git clone https://github.com/salmansamer827-cmyk/ExcorArabicFont.git
+pkg install git
+pkg install nodejs-lts
+pkg install python
+pkg install clang make
+pkg install redis
+cd ~
+git clone <رابط المشروع الخاص بك>
 cd ExcorArabicFont
-echo "buildozer -v android debug" > build.sh
-chmod +x build.sh
-./build.sh
-nano main.py
-[200~os
-import certifi
-from datetime import datetime, timedelta
-from kivy.core.text import LabelBase
-from kivy.core.clipboard import Clipboard
-from kivy.utils import get_color_from_hex
-from kivy.clock import Clock
-from kivy.lang import Builder
-from kivy.storage.jsonstore import JsonStore
-from kivymd.app import MDApp
-from kivymd.uix.snackbar import Snackbar
-from kivymd.uix.dialog import MDDialog
-from kivymd.uix.button import MDRaisedButton
-from kivy.network.urlrequest import UrlRequest
-from plyer import notification
-# إعدادات الأمان والخطوط
-os.environ['SSL_CERT_FILE'] = certifi.where()
-try:
-except:
-# واجهة المستخدم بنمط Solana Dark
-KV = '''
-MDScreen:
-    md_bg_color: get_color_from_hex("#0B0E11")
-    MDBoxLayout:
-        orientation: 'vertical'
-        padding: "15dp"
-        spacing: "10dp"
-
-        MDBoxLayout:
-            size_hint_y: None
-            height: "50dp"
-            MDLabel:
-                text: "EXCORA PRO v1.0"
-                font_name: "SamerArabic"
-                theme_text_color: "Custom"
-                text_color: get_color_from_hex("#00FFA3")
-                font_style: "H5"
-            MDSwitch:
-                id: alert_switch
-                active: True
-                thumb_color_active: get_color_from_hex("#DC1FFF")
-
-        ScrollView:
-            MDBoxLayout:
-                orientation: 'vertical'
-                adaptive_height: True
-                spacing: "15dp"
-                padding: [0, "10dp"]
-
-                # بطاقة BTC
-                MDCard:
-                    size_hint_y: None
-                    height: "80dp"
-                    md_bg_color: get_color_from_hex("#1E2329")
-                    radius: [15,]
-                    padding: "15dp"
-                    MDLabel:
-                        id: btc_price
-                        text: "BTC: Loading..."
-                        halign: "center"
-                        font_style: "H6"
-                        theme_text_color: "Custom"
-                        text_color: "#FFFFFF"
-
-                # بطاقة ETH
-                MDCard:
-                    size_hint_y: None
-                    height: "80dp"
-                    md_bg_color: get_color_from_hex("#1E2329")
-                    radius: [15,]
-                    padding: "15dp"
-                    MDLabel:
-                        id: eth_price
-                        text: "ETH: Loading..."
-                        halign: "center"
-                        font_style: "H6"
-                        theme_text_color: "Custom"
-                        text_color: "#FFFFFF"
-
-                # بطاقة SOL
-                MDCard:
-                    size_hint_y: None
-                    height: "80dp"
-                    md_bg_color: get_color_from_hex("#1E2329")
-                    radius: [15,]
-                    padding: "15dp"
-                    MDLabel:
-                        id: sol_price
-                        text: "SOL: Loading..."
-                        halign: "center"
-                        font_style: "H6"
-                        theme_text_color: "Custom"
-                        text_color: get_color_from_hex("#00FFA3")
-
-        MDLabel:
-            id: trial_info
-            text: "Checking License..."
-            halign: "center"
-            theme_text_color: "Hint"
-            font_style: "Caption"
-
-        MDBoxLayout:
-            size_hint_y: None
-            height: "50dp"
-            spacing: "10dp"
-            MDRaisedButton:
-                text: "Copy USDT (TRC20)"
-                font_name: "SamerArabic"
-                md_bg_color: get_color_from_hex("#DC1FFF")
-                on_release: app.copy_payment("USDT")
-            MDRaisedButton:
-                text: "Copy ZainCash"
-                font_name: "SamerArabic"
-                md_bg_color: get_color_from_hex("#00FFA3")
-                text_color: [0,0,0,1]
-                on_release: app.copy_payment("ZainCash")
-'''
-class ExcoraProApp(MDApp):
-if __name__ == "__main__":;     ExcoraProApp().run()
-nano main.py
-# إنشاء الملف الافتراضي
-buildozer init
-nano buildozer.spec
-adb logcat *:E | grep python
-192.168.3.194:39009
-393904
-963928
-adb pair 192.168.3.194:39883
-379163
-405914
-import os
-import shutil
-# تحديد المجلد الحالي
-project_path = os.getcwd()
-# 1. قائمة الملفات والمجلدات التي يجب حذفها (الزائدة)
-to_delete = [
-]
-# 2. البحث عن أي ملف APK قديم وحذفه
-print("--- بدء عملية تنظيف مشروع EXCORA ---")
-for item in os.listdir(project_path):
-print("--- المشروع الآن نظيف وجاهز للرفع إلى Colab ---")
-python
-cd ~/ExcorArabicFont && rm -rf .buildozer/ bin/ __pycache__ *.apk EXCORA_LOG.txt EXCORA_ERROR.txt && mkdir -p assets/images assets/fonts && echo "--- تم تنظيف وترتيب مشروع EXCORA بنجاح ---"
-adb logcat *:E
+npm install
+cd ExcorArabicFont
+npm install
+ls
+# تشغيل Redis
+redis-server
+# تشغيل Backend
+npm run dev
+# تشغيل Market Engine
+cd market
+node engine.js
+# تشغيل Frontend
+cd ../frontend
+npm start
+cd ~/ExcorArabicFont
+nano run_all.sh
+y
+chmod +x run_all.sh
+./run_all.sh
+CTRL+b ثم رقم النافذة
+tmux attach -t excora
+tmux kill-session -t excora
+redis-server
+# 1️⃣ تشغيل Redis
+redis-server
+# 2️⃣ فتح نافذة جديدة وتشغيل Backend
+cd ~/ExcorArabicFont
+npm run dev
+# 3️⃣ نافذة جديدة لتشغيل Market Engine
+cd ~/ExcorArabicFont/market
+node engine.js
+# 4️⃣ نافذة جديدة لتشغيل Frontend
+cd ~/ExcorArabicFont/frontend
+npm start
+redis-server /data/data/com.termux/files/home/ExcorArabicFont/redis.conf
+cd ~/ExcorArabicFont
+npm run dev
+cd ~/ExcorArabicFont/market
+node engine.js
+cd ~/ExcorArabicFont/frontend
+npm start
+cd ~
+git clone <رابط المشروع الخاص بك>
+cd ExcorArabicFont
+cd ~
+git clone https://github.com/username/ExcorArabicFont.git
+cd ExcorArabicFont
+cd ~
+mkdir ExcorTrade
+cd ExcorTrade
+git init
+touch README.md
+git add .
+git commit -m "Initial commit - ExcorTrade project"
+git remote add origin https://github.com/USERNAME/ExcorTrade.git
+git branch -M main
+git push -u origin main
+git remote add origin https://github.com/samer/ExcorTrade.git
+git push -u origin main
+mkdir -p ExcorTrade/{backend,frontend,market}
+cd ExcorTrade
+cd backend
+npm install
+cd ../frontend
+npm install
+~/ExcorTrade/ExcorTrade
+cd ~
+rm -rf ExcorTrade
+mkdir ExcorTrade
+cd ExcorTrade
+mkdir backend frontend market
+cd backend
+nano package.json
+nano index.js
+cd ../market
+nano engine.js
+cd ../frontend
+nano index.html
+cd ~/ExcorTrade/backend
+npm install
+redis-server
+source venv/bin/activate
+which buildozer
+ls
+~adduser excora
+su - excora
+pkg update -y
+pkg upgrade -y
+pkg install proot-distro -y
+proot-distro install ubuntu
+proot-distro login ubuntu
+pkg update && pkg upgrade
+pkg install proot-distro
+proot-distro install ubuntu
+proot-distro login ubuntu
+export PUB_SECURITY_ADVISORIES=false
+flutter doctor
+# تنظيف ملفات الكاش التي قد تكون تسببت في تعارض التنسيقات
+flutter clean
+# جلب الحزم من جديد
+flutter pub get
+# إذا أردت تحديث الأداة لنسخة أكثر استقراراً
+flutter upgrade
+proot-distro login ubuntu
