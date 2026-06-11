@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@capacitor/create-app": "^0.5.1"
+  },
+  "_npx": {
+    "packages": [
+      "@capacitor/create-app@*"
+    ]
+  }
+}

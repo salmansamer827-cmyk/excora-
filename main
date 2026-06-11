@@ -1,0 +1,65 @@
+from kivymd.app import MDApp
+from kivymd.uix.screen import MDScreen
+from kivymd.uix.label import MDLabel
+from kivymd.uix.button import MDRaisedButton
+from kivy.lang import Builder
+from kivy.core.window import Window
+
+# إعدادات الواجهة المستوحاة من Cyberpunk وسولانا
+KV = '''
+MDScreen:
+    md_bg_color: 0.05, 0.05, 0.05, 1  # خلفية سوداء عميقة
+
+    MDBoxLayout:
+        orientation: 'vertical'
+        padding: "20dp"
+        spacing: "10dp"
+
+        MDLabel:
+            text: "EXCORA ULTIMATE"
+            halign: "center"
+            font_style: "H4"
+            theme_text_color: "Custom"
+            text_color: 0, 1, 0.5, 1  # أخضر نيون (Solana Green)
+            bold: True
+
+        MDLabel:
+            text: "Smart Money Concepts & Analysis"
+            halign: "center"
+            theme_text_color: "Secondary"
+            font_style: "Subtitle1"
+
+        MDRelativeLayout:
+            # هنا سيظهر الرسم البياني المستقبلي
+            MDLabel:
+                text: "[ FVG & Liquidity Scanner Active ]"
+                halign: "center"
+                theme_text_color: "Custom"
+                text_color: 0.6, 0, 1, 1  # بنفسجي نيون
+
+        MDRaisedButton:
+            text: "CONNECT TO BINANCE"
+            pos_hint: {"center_x": .5}
+            md_bg_color: 0.6, 0, 1, 1
+            on_release: app.connect_binance()
+
+        MDLabel:
+            text: "Status: Ready for Analysis"
+            halign: "center"
+            font_style: "Caption"
+            theme_text_color: "Hint"
+'''
+
+class ExcoraApp(MDApp):
+    def build(self):
+        # ضبط التنسيق اللوني للمشروع
+        self.theme_cls.theme_style = "Dark"
+        self.theme_cls.primary_palette = "DeepPurple"
+        return Builder.load_string(KV)
+
+    def connect_binance(self):
+        print("Connecting to Binance API...")
+        # هنا يتم استدعاء منطق الربط الذي تحدثنا عنه سابقاً
+
+if __name__ == "__main__":
+    ExcoraApp().run()

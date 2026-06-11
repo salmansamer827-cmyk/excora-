@@ -1,0 +1,887 @@
+[INFO   ] Logger: Record log in /data/data/com.termux/files/home/.kivy/logs/kivy_26-04-02_0.txt
+[INFO   ] Kivy: v2.3.1
+[INFO   ] Kivy: Installed at "/data/data/com.termux/files/usr/lib/python3.13/site-packages/kivy/__init__.py"
+[INFO   ] Python: v3.13.12 (main, Mar  8 2026, 11:54:24) [Clang 21.0.0 (https://android.googlesource.com/toolchain/llvm-project 5e96669f0
+[INFO   ] Python: Interpreter at "/data/data/com.termux/files/usr/bin/python"
+[INFO   ] Logger: Purge log fired. Processing...
+[INFO   ] Logger: Purge finished!
+[INFO   ] KivyMD: 1.2.0, git-Unknown, 2026-03-31 (installed at "/data/data/com.termux/files/usr/lib/python3.13/site-packages/kivymd/__init__.py")
+[WARNING] KivyMD: Version 1.2.0 is deprecated and is no longer supported. Use KivyMD version 2.0.0 from the master branch (pip install https://github.com/kivymd/KivyMD/archive/master.zip)
+[INFO   ] Factory: 195 symbols loaded
+[INFO   ] Image: Providers: img_tex, img_dds, img_sdl2, img_pil (img_ffpyplayer ignored)
+[INFO   ] Text: Provider: sdl2(['text_pango'] ignored)
+[INFO   ] Window: Provider: sdl2
+[INFO   ] GL: Using the "OpenGL" graphics system
+[INFO   ] GL: Backend used <sdl2>
+[INFO   ] GL: OpenGL version <b'4.5 (Compatibility Profile) Mesa 26.0.3'>
+[INFO   ] GL: OpenGL vendor <b'Mesa'>
+[INFO   ] GL: OpenGL renderer <b'llvmpipe (LLVM 21.1.8, 128 bits)'>
+[INFO   ] GL: OpenGL parsed version: 4, 5
+[INFO   ] GL: Shading version <b'4.50'>
+[INFO   ] GL: Texture max size <16384>
+[INFO   ] GL: Texture max units <32>
+[INFO   ] Window: auto add sdl2 input provider
+[INFO   ] Window: virtual keyboard not allowed, single mode, not docked
+[INFO   ] Clipboard: Provider: sdl2(['clipboard_xclip', 'clipboard_xsel', 'clipboard_dbusklipper', 'clipboard_gtk3'] ignored)
+[CRITICAL] Cutbuffer: Unable to find any valuable Cutbuffer provider. Please enable debug logging (e.g. add -d if running from the command line, or change the log level in the config) and re-run your app to identify potential causes
+xclip - FileNotFoundError: [Errno 2] No such file or directory: 'xclip'
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/kivy/core/__init__.py", line 59, in core_select_lib
+    mod = importlib.__import__(name='{2}.{0}.{1}'.format(
+        basemodule, modulename, base),
+        globals=globals(),
+        locals=locals(),
+        fromlist=[modulename], level=0)
+  File "<frozen importlib._bootstrap>", line 1466, in __import__
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/kivy/core/clipboard/clipboard_xclip.py", line 17, in <module>
+    p = subprocess.Popen(['xclip', '-version'], stdout=subprocess.PIPE,
+        stderr=subprocess.DEVNULL)
+  File "/data/data/com.termux/files/usr/lib/python3.13/subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/subprocess.py", line 1989, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+
+xsel - FileNotFoundError: [Errno 2] No such file or directory: 'xsel'
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/kivy/core/__init__.py", line 59, in core_select_lib
+    mod = importlib.__import__(name='{2}.{0}.{1}'.format(
+        basemodule, modulename, base),
+        globals=globals(),
+        locals=locals(),
+        fromlist=[modulename], level=0)
+  File "<frozen importlib._bootstrap>", line 1466, in __import__
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/kivy/core/clipboard/clipboard_xsel.py", line 15, in <module>
+    p = subprocess.Popen(['xsel', '--version'], stdout=subprocess.PIPE)
+  File "/data/data/com.termux/files/usr/lib/python3.13/subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/subprocess.py", line 1989, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+
+[INFO   ] Base: Start application main loop
+[INFO   ] GL: NPOT texture support is available
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[DEBUG  ] https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+[DEBUG  ] Starting new HTTPS connection (1): api.binance.com:443
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
+[WARNING] stderr: --- Logging error ---
